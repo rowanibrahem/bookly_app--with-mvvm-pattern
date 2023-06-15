@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../../constants.dart';
 import '../../../../../../core/utilies/assets.dart';
 import '../../../../../../core/utilies/styles.dart';
+import 'book_rating.dart';
 
 class BestSellers extends StatelessWidget {
   const BestSellers({Key? key}) : super(key: key);
@@ -28,37 +30,41 @@ class BestSellers extends StatelessWidget {
           const SizedBox(
             width: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .5,
-                child:  Text (
-                  'Harry Poter and Goblit the Fire',
-                  style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-             const SizedBox(
-               height: 3,
-             ),
-              const Text(
-                  'J.K. Rolling',
-                style: Styles.textStyle14,
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              Row(
-                children: [
-                  Text(
-                    '19 dollarr',
-                  style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:  [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child:  Text (
+                    'Harry Poter and Goblit the Fire',
+                    style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                ],
-              ),
-            ],
+                ),
+               const SizedBox(
+                 height: 3,
+               ),
+                const Text(
+                    'J.K. Rolling',
+                  style: Styles.textStyle14,
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '19 dollarr',
+                    style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(),
+                    BookRating(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
