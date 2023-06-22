@@ -12,13 +12,16 @@ class BestSellerItemView extends StatefulWidget {
 class _BestSellerItemViewState extends State<BestSellerItemView> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: 10,
-          itemBuilder:(context, index){
-            return const BestSellers();
-          }
-      ),
+    return ListView.builder(
+      physics: NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemCount: 10,
+        itemBuilder:(context, index){
+          return const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: BestSellers(),
+          );
+        }
     );
   }
 }
