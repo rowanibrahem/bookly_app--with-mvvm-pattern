@@ -13,7 +13,7 @@ class _BestSellerItemViewState extends State<BestSellerItemView> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       itemCount: 10,
         itemBuilder:(context, index){
