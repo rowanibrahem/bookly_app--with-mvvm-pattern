@@ -1,13 +1,9 @@
 import 'dart:async';
-
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../home/data/presentation/views/home_view.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({Key? key}) : super(key: key);
@@ -20,11 +16,12 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
-      Get.to( () => const HomeView(),
-          transition: Transition.fade,
-          duration: kTransitionDuration
-      );
+    Timer(const Duration(seconds: 8), () {
+      // Get.to( () => const HomeView(),
+      //     transition: Transition.fade,
+      //     duration: kTransitionDuration
+      // );
+      GoRouter.of(context).push('/homeView');
       // Navigator.of(context).pushReplacement(
       //   MaterialPageRoute(builder: (context) => HomeView()),
       // );
