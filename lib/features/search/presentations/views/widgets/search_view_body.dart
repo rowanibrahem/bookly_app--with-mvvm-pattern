@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
+import 'custom_search_text_field.dart';
+
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Column(
+        children: [
+          CustomSearchTextField(),
+        ],
+      ),
+    );
   }
 }
