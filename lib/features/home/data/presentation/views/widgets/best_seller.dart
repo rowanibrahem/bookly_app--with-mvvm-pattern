@@ -6,8 +6,8 @@ import '../../../../../../core/utilies/assets.dart';
 import '../../../../../../core/utilies/styles.dart';
 import 'book_rating.dart';
 
-class BestSellers extends StatelessWidget {
-  const BestSellers({Key? key}) : super(key: key);
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class BestSellers extends StatelessWidget {
         GoRouter.of(context).push('/BookView');
       },
       child: SizedBox(
-        height: 120,
+        height: 125,
         child: Row(
           children: [
             AspectRatio(

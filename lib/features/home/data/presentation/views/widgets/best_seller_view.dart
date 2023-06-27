@@ -19,7 +19,7 @@ class _BestSellerItemViewState extends State<BestSellerItemView> {
         itemBuilder:(context, index){
           return const Padding(
             padding: EdgeInsets.symmetric(vertical: 10),
-            child: BestSellers(),
+            child: BookListViewItem(),
           );
         }
     );
