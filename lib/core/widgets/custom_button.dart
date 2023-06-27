@@ -32,7 +32,7 @@ final String text;
           ),
         ),
         child: Text(
-          'text',
+          text,
           style: Styles.textStyle18.copyWith(
             color: textColor,
             fontWeight: FontWeight.w900,
