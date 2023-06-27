@@ -1,9 +1,10 @@
-import 'package:bookly_app/features/home/data/presentation/views/widgets/books_action.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utilies/styles.dart';
 import 'book_rating.dart';
 
+import 'books_action.dart';
 import 'custom_book_item.dart';
 
 class BookDetailsSection extends StatelessWidget {

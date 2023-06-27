@@ -65,7 +65,9 @@ class BookListViewItem extends StatelessWidget {
                       style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
-                      BookRating(),
+                      Expanded(
+                          child: BookRating()
+                      ),
                     ],
                   ),
                 ],

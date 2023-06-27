@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home/data/presentation/views/widgets/best_seller.dart';
+import '../../../../home/presentation/views/widgets/best_seller.dart';
 
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({Key? key}) : super(key: key);
@@ -16,6 +16,6 @@ class SearchResultListView extends StatelessWidget {
             child: BookListViewItem(),
           );
         }
-    );;
+    );
   }
 }
