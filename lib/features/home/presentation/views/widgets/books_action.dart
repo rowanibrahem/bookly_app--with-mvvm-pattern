@@ -10,7 +10,8 @@ class BooksAction extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: const [
-          Expanded(child: CustomButton(
+          Expanded(
+            child: CustomButton(
             backgroundColor: Colors.white,
             textColor: Colors.black,
             borderRadius: BorderRadius.only(
