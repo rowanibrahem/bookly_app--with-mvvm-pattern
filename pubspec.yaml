@@ -36,6 +36,7 @@ dependencies:
   google_fonts:
   go_router:
   equatable:
+  dartz:
 
 
   # The following adds the Cupertino Icons font to your application.
