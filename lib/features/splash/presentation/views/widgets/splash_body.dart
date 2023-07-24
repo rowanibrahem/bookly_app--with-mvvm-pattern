@@ -16,7 +16,7 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 8), () {
+    Timer(const Duration(seconds: 10), () {
       // Get.to( () => const HomeView(),
       //     transition: Transition.fade,
       //     duration: kTransitionDuration

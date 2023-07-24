@@ -42,7 +42,7 @@ class HomeBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
+        const SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: BestSellerItemView(),
