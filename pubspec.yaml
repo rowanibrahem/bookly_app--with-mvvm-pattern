@@ -48,6 +48,7 @@ dependencies:
   cached_network_image: ^3.2.3
   flutter_launcher_icons: ^0.13.1
   shimmer: ^3.0.0
+  url_launcher: ^6.1.11
 
 flutter_launcher_icons:
   android: true

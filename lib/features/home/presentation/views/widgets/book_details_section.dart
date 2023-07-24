@@ -1,4 +1,5 @@
 
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utilies/styles.dart';
@@ -8,8 +9,8 @@ import 'books_action.dart';
 import 'custom_book_item.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({Key? key}) : super(key: key);
-
+  const BookDetailsSection({Key? key, required this.book}) : super(key: key);
+ final BookModel book;
   @override
 
   Widget build(BuildContext context) {
@@ -18,16 +19,18 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child:  CustomBookImage(imageUrl: 'https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VhcmNofGVufDB8fDB8fHww&w=1000&q=80',),
+          child:  CustomBookImage(
+            imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? '',),
         ),
         const SizedBox(
           height: 43,
         ),
         Text(
-          'The Jungle Book',
+          book.volumeInfo.title!,
           style: Styles.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 6,
@@ -35,7 +38,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            'Rudyard Kipling',
+            book.volumeInfo.authors?[0]??'',
             style: Styles.textStyle18.copyWith(
               fontWeight: FontWeight.w500,
               fontStyle: FontStyle.italic,
@@ -47,8 +50,8 @@ class BookDetailsSection extends StatelessWidget {
         ),
          BookRating(
           mainAxisAlignment: MainAxisAlignment.center,
-           rating: 5,
-           count: 250,
+           rating: book.volumeInfo.averageRating ?? 5,
+           count: book.volumeInfo.ratingsCount??2500,
         ),
         const SizedBox(
           height: 37,
