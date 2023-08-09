@@ -16,7 +16,7 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 8), () {
       // Get.to( () => const HomeView(),
       //     transition: Transition.fade,
       //     duration: kTransitionDuration
@@ -45,7 +45,7 @@ class _SplashBodyState extends State<SplashBody> {
                 WavyAnimatedText('Bookly'),
                 WavyAnimatedText('Read Free Books '),
               ],
-              isRepeatingAnimation: true,
+              // isRepeatingAnimation: true,
               onTap: () {
                 print("Tap Event");
               },
